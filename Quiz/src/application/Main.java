@@ -10,9 +10,22 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	
-	Parent root;
-	Scene scene;
-	static Stage stage;
+	private Parent root;
+	private Scene scene;
+	private Stage stage;
+	private static Main instance;
+	
+	public Main() {
+		if (instance != null) {
+			System.out.println("wtf");
+			throw new UnsupportedOperationException("I'm a singleton baby");
+		}
+		instance = this;
+	}
+	
+	public static Main getInstance() {
+		return instance;
+	}
 
 	public void changeScene(String title, String location, int width, int height) {
 		try {

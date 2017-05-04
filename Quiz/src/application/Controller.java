@@ -9,7 +9,7 @@ public class Controller {
 	@FXML
 	private ImageView image;
 	
-	private Main main = new Main();
+	private Main main = Main.getInstance();
 	
 
 	public void initialize() {

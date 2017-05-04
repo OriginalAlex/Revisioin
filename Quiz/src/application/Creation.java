@@ -22,7 +22,7 @@ public class Creation {
 
 	private File write; // the file which the user selects
 	private Write writeClass;
-	private Main main = new Main();
+	private Main main = Main.getInstance();
 		
 	public void addQuestion() {
 

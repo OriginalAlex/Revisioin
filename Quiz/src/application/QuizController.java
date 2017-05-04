@@ -34,7 +34,7 @@ public class QuizController {
 	
 	private long timeSinceLastAnswer = 0;
 	private String questionBeingAsked = null;
-	private Main main = new Main();
+	private Main main = Main.getInstance();
 	private Map<String, String> questions;
 	
 	
