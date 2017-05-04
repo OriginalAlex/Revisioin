@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="291.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.QuizController">
+   <center>
+      <SplitPane dividerPositions="0.5444444444444444" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="399.0">
+               <children>
+                  <Text layoutX="157.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question" underline="true">
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="question" layoutX="54.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="290.07421875">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutY="2.0" mnemonicParsing="false" onAction="#onClick" text="Question File" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="399.0">
+               <children>
+                  <VBox layoutX="17.0" layoutY="3.0">
+                     <children>
+                        <HBox />
+                     </children>
+                  </VBox>
+                  <Button layoutX="171.0" layoutY="53.0" mnemonicParsing="false" onAction="#onSubmit" text="Submit!" />
+                  <TextArea fx:id="answer" layoutX="115.0" layoutY="3.0" prefHeight="44.0" prefWidth="179.0" promptText="Answer" wrapText="true" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="71.0" prefWidth="411.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="questionsAsked" fill="#1fd2f0" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions Asked: 0" underline="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="questionsRight" fill="#1d8f39" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions Correct: 0" />
+            <Text fx:id="questionsWrong" fill="#da0a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions Wrong: 0" />
+            <Text fx:id="time" fill="#c91493" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Taken To Answer Last Question: 0ms" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#changeToMenu" prefHeight="25.0" prefWidth="126.0" text="--&gt; Menu" />
+                  <Region prefHeight="25.0" prefWidth="299.0" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" onAction="#changeToAdd" prefHeight="25.0" prefWidth="128.0" text="--&gt; Create" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</BorderPane>
